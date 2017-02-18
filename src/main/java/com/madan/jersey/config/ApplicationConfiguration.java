@@ -6,7 +6,9 @@ import java.util.Map;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
-@ApplicationPath("madan")
+import org.glassfish.jersey.server.ResourceConfig;
+//-------------------- one way of configuration---------------------------------
+/*@ApplicationPath("madan")
 public class ApplicationConfiguration extends Application {
 	
 	@Override
@@ -15,4 +17,14 @@ public class ApplicationConfiguration extends Application {
 		properties.put("jersey.config.server.provider.packages", "com.madan.jersey.rest");
 		return properties;
 	}
+}*/
+
+//--------------------------------------Another way of Configuration-----------------
+@ApplicationPath("madan")
+public class ApplicationConfiguration extends ResourceConfig {
+
+	public ApplicationConfiguration() {
+		packages("com.madan.jersey.rest");
+	}
+
 }
