@@ -24,7 +24,7 @@ public class ApplicationConfiguration extends Application {
 public class ApplicationConfiguration extends ResourceConfig {
 
 	public ApplicationConfiguration() {
-		packages("com.madan.jersey.rest");
+		packages("com.madan.jersey.rest;com.madan.jersey.exceptions");
 	}
 
 }

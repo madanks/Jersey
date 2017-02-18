@@ -18,7 +18,8 @@ public class StudentRest {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void addStudent(Student student) {
 		if (student.getFirstName() == "") {
-			throw new MyJerseyException("First Name should not be empty");
+			// throw new MyJerseyException("First Name should not be empty");
+			student.getFirstName().charAt(0);
 		} else {
 			System.out.println(student.toString());
 		}
