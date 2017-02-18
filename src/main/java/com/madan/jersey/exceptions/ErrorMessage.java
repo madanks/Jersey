@@ -1,5 +1,9 @@
 package com.madan.jersey.exceptions;
 
+/**
+ * @author Madan
+ *
+ */
 public class ErrorMessage {
 	private int statusCode;
 	private String statusDescription;

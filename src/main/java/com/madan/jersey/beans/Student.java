@@ -1,5 +1,9 @@
 package com.madan.jersey.beans;
 
+/**
+ * @author Madan
+ *
+ */
 public class Student {
 
 	private int id;
