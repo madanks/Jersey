@@ -8,6 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.madan.jersey.beans.Student;
+import com.madan.jersey.exceptions.MyJerseyException;
 
 @Path("student")
 public class StudentRest {
@@ -16,7 +17,11 @@ public class StudentRest {
 	@Path("addStudent")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void addStudent(Student student) {
-		System.out.println(student.toString());
+		if (student.getFirstName() == "") {
+			throw new MyJerseyException("First Name should not be empty");
+		} else {
+			System.out.println(student.toString());
+		}
 	}
 
 	@GET
