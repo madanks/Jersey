@@ -14,7 +14,6 @@ import com.madan.jersey.beans.Student;
  *
  */
 @Singleton
-@Service
 public class StudentService {
 
 	private List<Student> studentList = new ArrayList<>();
